@@ -1,0 +1,105 @@
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>group-overview</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Group Overview</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- Start of Student Avatar FAB -->
+
+  <ion-fab slot="fixed" vertical="top" horizontal="end">
+    <ion-fab-button color="light">
+      <ion-icon name="person-circle-outline"></ion-icon>
+        </ion-fab-button>
+  </ion-fab>
+
+  <ion-img src="..\assets\myRaft_Top_Logo.png" alt="MyRaft Top Logo"></ion-img>
+
+  <!-- End of MyRaft Logo and Student Avatar FAB -->
+
+
+  
+  <ion-card>
+    <ion-img
+  src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcsumb.edu%2Fmedia%2Fcsumb%2Fsection-editors%2Flibrary%2Flibrary-diversity-equity-amp-inclusion%2FCLSS-Banner-3549x2304.png&f=1&nofb=1&ipt=67e600107bb63c320624b40ca0b12922439026d4bd83221dd8e2974c9b498d50&ipo=images"
+  alt="El Centro Logo"
+></ion-img>
+    <ion-card-header>
+      <ion-card-title>El Centro - Service Organization</ion-card-title>
+    </ion-card-header>
+
+    <ion-toolbar>
+      <button routerLink="/group-overview" class="appheader" id="currentButton">Overview</button>
+      <button routerLink="/group-events" class="appheader">Events</button>
+    </ion-toolbar>
+  </ion-card>
+
+
+<!-- Group Info -->
+<ion-content [fullscreen]="true" class="ion-padding group-info">
+<h2>Mission:</h2>
+<p>CSUMB's Centro will serve as a central hub and resource for Chicanx/Latinx student success, by providing academic, social, and personal support in a welcoming space to be the affirming and diverse home students deserve while pursuing their educational and personal goals.</p>
+
+<h2>Contact Info:</h2>
+<a href="mailto:elcentro@csumb.edu">elcentro&#64;csumb.edu</a>
+
+<h2>Open Drop-in Hours:</h2>
+<p>Tuesday - Friday<br>
+9:00 AM–5:00 PM</p>
+
+<h2>Location:</h2>
+<p>Bldg 12 Rm 125<br>
+100 Campus Center, Seaside, CA 93955, United States</p>
+
+<h2>Social Links:</h2>
+  <div class="social-links">
+    <a href="https://www.instagram.com/elcentro_csumb/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/1200px-Instagram_logo_2016.svg.png" alt="Instagram"></a>
+    <a href="YOUR_TWITTER_LINK_HERE" target="_blank"><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.pngkey.com%2Fpng%2Ffull%2F2-27646_twitter-logo-png-transparent-background-logo-twitter-png.png&f=1&nofb=1&ipt=c872bec55e8bd0caa23fb5e66d0e566d8f4560e0932c22f5042dea825156ab52&ipo=images" alt="Twitter"></a>
+    <a href="YOUR_FACEBOOK_LINK_HERE" target="_blank"><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Ff%2Fff%2FFacebook_logo_36x36.svg%2F1200px-Facebook_logo_36x36.svg.png&f=1&nofb=1&ipt=f3005930b29053523be9f325e080cda1aecd922d31cac933def9145f1b6fc671&ipo=images" alt="Facebook"></a>
+  </div>
+
+</ion-content>
+<!-- End of Group Info -->
+
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <!-- Navigation Bar -->
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+
+    <ion-tab-button [routerLink]="['/home']" tab="home">
+      <ion-icon name="home-outline"></ion-icon>
+    </ion-tab-button>
+
+    <ion-tab-button [routerLink]="['/resources-page']" tab="journal">
+      <ion-icon name="journal-outline"></ion-icon>
+    </ion-tab-button>
+
+    <ion-tab-button [routerLink]="['/group-overview']" tab="people">
+      <ion-icon name="people-outline"></ion-icon>
+    </ion-tab-button>
+
+    <ion-tab-button [routerLink]="['/chats-page']" tab="chat">
+      <ion-icon name="chatbox-outline"></ion-icon>
+    </ion-tab-button>
+
+    <ion-tab-button tab="menu">
+      <ion-icon name="menu-outline"></ion-icon>
+    </ion-tab-button>
+
+  </ion-tab-bar>
+</ion-tabs>
+<!-- End of Navigation Bar -->
+  </ion-toolbar>
+</ion-footer>
+

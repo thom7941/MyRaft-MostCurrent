@@ -1,0 +1,56 @@
+.appheader {
+    background-color: white;
+    font-family: Arial, sans-serif;
+    font-size: 17pt;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 50%;
+    float: left;
+    cursor: pointer;
+  }
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .logo {
+    width: 100%;
+    height: auto;
+  }
+  
+  .toolbar {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .active {
+    border-bottom : solid blue; 
+  }
+  
+  .group-info h2 {
+    font-size : 20px; 
+    color : grey; 
+  }
+  
+  .group-info p,
+  .group-info a {
+    margin-bottom: 15px;
+    font-size : 15px; 
+  }
+  
+  #currentButton {
+    background-color: #011a42 ;
+    color: white;
+  }
+
+  .social-links {
+    display: flex;
+    justify-content: space-between;
+    width: 150px; 
+    margin-top: 10px;
+  }
+  
+  .social-links a img {
+    width: 30px;  
+    height: 30px; 
+  }
+  

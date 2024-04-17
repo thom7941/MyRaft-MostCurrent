@@ -56,6 +56,22 @@ const routes: Routes = [
     path: 'landing',
     loadChildren: () => import('./landing/landing.module').then( m => m.LandingPageModule)
   },
+  // group - overview
+  {
+    path: 'group-overview',
+    loadChildren: () => import('./group-overview/group-overview.module').then(m => m.GroupOverviewPageModule)
+  },
+  // group - events
+  {
+    path: 'group-events',
+    loadChildren: () => import('./group-events/group-events.module').then(m => m.GroupEventsPageModule)
+  },
+  // event - overview
+  {
+    path: 'event-details',
+    loadChildren: () => import('./event-details/event-details.module').then(m => m.EventDetailsPageModule)
+  },
+  //
 ];
 
 @NgModule({
