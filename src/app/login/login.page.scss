@@ -1,0 +1,130 @@
+ion-header {
+    ion-toolbar {
+      --background: #f0f0f0;
+    }
+  
+    ion-segment {
+      --background: #f0f0f0;
+  
+      ion-segment-button {
+        --color: #888;
+        --color-checked: #000;
+        --indicator-color: #000;
+      }
+    }
+  }
+  
+  .feed-container {
+    padding: 16px;
+  
+    .post {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 16px;
+      margin-bottom: 16px;
+  
+      .post-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 8px;
+  
+        ion-avatar {
+          width: 40px;
+          height: 40px;
+          margin-right: 8px;
+        }
+  
+        .post-info {
+          h3 {
+            font-size: 16px;
+            font-weight: bold;
+            margin: 0;
+          }
+  
+          p {
+            font-size: 14px;
+            margin: 0;
+          }
+        }
+      }
+  
+      .post-actions {
+        display: flex;
+        align-items: center;
+        color: #888;
+        font-size: 14px;
+  
+        ion-icon {
+          margin-right: 4px;
+        }
+  
+        span {
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+
+  .post {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    margin-bottom: 16px;
+  
+    .post-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+  
+      ion-avatar {
+        width: 40px;
+        height: 40px;
+        margin-right: 8px;
+      }
+  
+      .post-info {
+        h3 {
+          font-size: 16px;
+          font-weight: bold;
+          margin: 0;
+        }
+  
+        p {
+          font-size: 14px;
+          color: #888;
+          margin: 0;
+        }
+      }
+    }
+  
+    .post-content {
+      margin-bottom: 8px;
+  
+      p {
+        margin: 0;
+      }
+    }
+  
+    .post-actions {
+      display: flex;
+      align-items: center;
+      color: #888;
+      font-size: 14px;
+  
+      .action-item {
+        display: flex;
+        align-items: center;
+        margin-right: 16px;
+  
+        ion-icon {
+          margin-right: 4px;
+        }
+  
+        span {
+          margin-right: 8px;
+        }
+      }
+    }
+  }

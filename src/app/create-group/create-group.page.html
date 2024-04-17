@@ -1,0 +1,55 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Add new Group</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/groups"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+
+ <form [formGroup]="createGroupForm" (submit)="addGroup()" novalidate> 
+  <ion-item>
+    <!-- <ion-label position="stacked"> Group Title </ion-label> -->
+      <ion-input 
+        formControlName="title"
+        label="Group Name"
+        type="text"
+        placeholder="What's the group name?"
+        >
+      </ion-input>
+  </ion-item>
+
+  <ion-item>
+    <!-- <ion-label position="stacked"> Description </ion-label> -->
+    <ion-input 
+    formControlName="description"
+    label = "Group Type"
+    type="text"
+    placeholder="What's the group type?"
+    >
+  </ion-input>
+  </ion-item>
+
+  <ion-item>
+    <!-- <ion-label position="stacked"> Image </ion-label> -->
+      <ion-input 
+        formControlName="img"
+        label = "Image"
+        type="text"
+        placeholder="Paste the image URL here"
+        >
+      </ion-input>
+  </ion-item>
+
+  <ion-button expand="block" type="submit">save</ion-button>
+</form> 
+
+<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+  <ion-fab-button color="danger"  (click)="deleteGroup(groupId)">
+    <ion-icon name="remove"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
+
+</ion-content>

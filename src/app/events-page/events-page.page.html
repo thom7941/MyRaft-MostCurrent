@@ -1,0 +1,111 @@
+<ion-header [translucent]="true">
+  <ion-tab-bar>
+      <!-- <ion-button>
+        <ion-img
+        src="https://mail.google.com/mail/u/0?ui=2&ik=2a39c5f424&attid=0.1&permmsgid=msg-f:1789380448683362721&th=18d528099bcd09a1&view=fimg&fur=ip&sz=s0-l75-ft&attbid=ANGjdJ_8VtViFZS9tSLkZM8nUF2RcoFKFkPSImoZ1m2q6zHet0ydfN9h8hh4kwUtkD8UIjqVSQZLOYVGgtrSXkmG32KFnco27PnxyinnyEFNqEVzIhC5mXXkqsbeHqk&disp=emb&realattid=18d52805cb36103f6211">
+        </ion-img>
+      </ion-button> -->
+  </ion-tab-bar>
+  <ion-tab-bar>
+      <ion-tab-button routerLink="/home" tab="home" class="appheader">
+        Feed
+      </ion-tab-button>
+      <ion-tab-button routerLink="/events" tab="home" id="currentButton" class="appheader">
+        Events
+      </ion-tab-button>
+    </ion-tab-bar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!-- <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-searchbar class="custom" placeholder="Search Groups"></ion-searchbar>
+    </ion-toolbar>
+  </ion-header> -->
+
+  <!-- Search Container -->
+<div id="searchContainer"> 
+
+  <ion-toolbar>
+    <ion-buttons start>
+      <ion-searchbar class="custom" placeholder="Search Groups"></ion-searchbar>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button color="raft-blue" fill = "solid" id="listButton">
+        <ion-icon slot="icon-only" name="list-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button color="off-white" fill = "solid" id="calendarButton">
+        <ion-icon slot="icon-only" name="calendar-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+</ion-toolbar>
+</div>
+
+<!-- My Events Container -->
+<div id="myEventsContainer">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button id="listButton">
+        My Events
+      </ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="start">
+      <ion-button id="listButton">
+        Live
+      </ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button color="off-white" fill = "solid" id="calendarButton">
+        <ion-icon slot="icon-only" name="funnel-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</div>
+
+<!-- Today Container -->
+<div id="todayContainer" class="ion-text-left">
+  <ion-toolbar>
+    <ion-item class="ion-text-start"> Today </ion-item>
+  </ion-toolbar>
+</div>
+
+<!-- Today's Events List -->
+
+
+
+
+</ion-content>
+
+<!-- FOOTER -->
+<ion-footer>
+    <ion-tab-bar slot="bottom">
+
+      <ion-tab-button routerLink="/home" tab="home">
+        <ion-icon name="home-outline"></ion-icon>
+      </ion-tab-button>
+
+      <ion-tab-button routerLink="/resources" tab="journal">
+        <ion-icon name="journal-outline"></ion-icon>
+      </ion-tab-button>
+
+      <ion-tab-button routerLink="/groups" tab="people">
+        <ion-icon name="people-outline"></ion-icon>
+      </ion-tab-button>
+
+      <ion-tab-button routerLink="/chats" tab="chat">
+        <ion-icon name="chatbox-outline"></ion-icon>
+      </ion-tab-button>
+
+      <ion-tab-button tab="menu">
+        <ion-icon name="menu-outline"></ion-icon>
+      </ion-tab-button>
+
+    </ion-tab-bar>
+</ion-footer>

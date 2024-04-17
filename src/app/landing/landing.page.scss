@@ -1,0 +1,30 @@
+.container{
+    text-align: center;
+    margin-top: 50%;
+
+}
+ion-content {
+    --background: linear-gradient(#BBE4ED, #f4f5f8);
+}
+
+ion-item {
+    --background: none;
+}
+
+.guestButton{
+    background-color: #003057;
+    border-radius: 12px;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+}
+
+.csumbLogin{
+    background-color: #003057;
+    border-radius: 12px;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+}

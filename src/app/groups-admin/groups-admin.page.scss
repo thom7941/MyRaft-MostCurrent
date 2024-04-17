@@ -1,0 +1,46 @@
+#trial2 {
+    color: white;
+    background-color: #011a42;
+    font-family: Arial, sans-serif;
+    font-size: 50pt;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0px;
+}
+#searchContainer {
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+#suggestedContainer {
+    text-align: left;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: yellow;
+    background-color: white;
+    padding-left: 15px;
+    padding-bottom: 5px;
+}
+
+ion-button {
+    // margin: auto;
+    flex-basis: 50px;
+    --background: #f2f2f0;
+    --color: #011a42;
+}
+
+ion-toolbar { 
+    --background: white;
+    padding-right: 15px;
+}
+ion-item {
+    --background:#f2f2f0;
+}
+
+#grid {
+    display: none;
+}
+
+

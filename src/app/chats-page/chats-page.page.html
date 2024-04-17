@@ -1,0 +1,96 @@
+<ion-content [fullscreen]="true">
+
+        <!-- Start of Student Avatar FAB -->
+
+        <ion-fab slot="fixed" vertical="top" horizontal="end">
+          <ion-fab-button color="light">
+            <ion-icon name="person-circle-outline"></ion-icon>
+              </ion-fab-button>
+          <!-- <ion-fab-list side="bottom">
+            <ion-fab-button>
+              <ion-icon name="document"></ion-icon>
+            </ion-fab-button>
+          </ion-fab-list> -->
+        </ion-fab>
+      
+        <!-- End of Student Avatar FAB -->
+      
+        <ion-img src="..\assets\myRaft_Top_Logo.png" alt="MyRaft Top Logo"></ion-img>
+        
+
+  <div id = "trial2">
+    <h1> Messages </h1>
+  </div>
+
+
+<!-- Search Container -->
+<div id="searchContainer"> 
+
+  <ion-toolbar>
+    <ion-buttons start>
+      <ion-searchbar class="custom" placeholder="Search Groups"></ion-searchbar>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button routerLink="/new-chat">
+        <ion-icon name="add"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</div>
+
+<!-- List of Existing Chats  -->
+<ion-list>
+      
+  <!-- CLUB ONE -->
+  <ion-item *ngFor="let chat of eventList"
+  routerLink="/chats/{{chat.chatId}}">
+  
+    <ion-avatar slot="start">
+      <img src= "https://placehold.co/400" />
+    </ion-avatar>
+    <ion-label>
+      {{chat['userName']}}
+      <p>
+        <ion-text>
+          {{chat['description']}}
+        </ion-text>
+      </p>
+
+    </ion-label>
+    <ion-text slot="end" color="medium">
+      {{chat['time']}}
+    </ion-text>
+  </ion-item>
+   
+</ion-list>
+
+<!-- FOOTER -->
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+
+    <ion-tab-button routerLink="/home" tab="home">
+      <ion-icon name="home-outline"></ion-icon>
+    </ion-tab-button>
+
+    <ion-tab-button routerLink="/resources" tab="journal">
+      <ion-icon name="journal-outline"></ion-icon>
+    </ion-tab-button>
+
+    <ion-tab-button routerLink="/groups" tab="people">
+      <ion-icon name="people-outline"></ion-icon>
+    </ion-tab-button>
+
+    <ion-tab-button routerLink="/chats" tab="chat">
+      <ion-icon name="chatbox-outline"></ion-icon>
+    </ion-tab-button>
+
+    <ion-tab-button tab="menu">
+      <ion-icon name="menu-outline"></ion-icon>
+    </ion-tab-button>
+
+  </ion-tab-bar>
+</ion-tabs>
+
+
+</ion-content>

@@ -1,0 +1,40 @@
+<ion-content [fullscreen]="true">
+  <div class="header">
+    <ion-title class="title">Sign in</ion-title>
+  </div>
+
+  <form [formGroup]="loginForm">
+    <div class="ion-padding">
+      <ion-item>
+        <ion-input formControlName="email" placeholder="Username" class="input"></ion-input>
+      </ion-item>
+      <div *ngIf="this.loginForm.controls?.['email'].touched && this.loginForm.controls?.['email'].invalid">
+        <ion-text>Email is required.</ion-text>
+      </div>
+
+      <ion-item>
+        <ion-input formControlName="password" placeholder="Password" class="input" type="password"></ion-input>
+      </ion-item>
+      <div *ngIf="this.loginForm.controls?.['password'].touched && this.loginForm.controls?.['password'].invalid">
+        <ion-text>Password must contain 8 characters: One special character, One Uppercase Letter, One number</ion-text>
+      </div>
+
+      <div class="forgotPassword">
+        <a [routerLink]="['/reset-password']">Forgot Password?</a>
+      </div>
+
+      <div class="rememberMe">
+        <ion-checkbox></ion-checkbox>
+        <span>Remember me</span>
+      </div>
+    </div>
+
+    <div class="ion-padding">
+      <ion-button expand="block" (click)="login()">Sign in</ion-button>
+    </div>
+  </form>
+
+  <div class="signupLink">
+    <p>Need help signing in? <a [routerLink]="['/signup']">Sign up now</a></p>
+  </div>
+</ion-content>
