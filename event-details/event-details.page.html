@@ -1,0 +1,114 @@
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>event-details</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Event Details</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- Start of Student Avatar FAB -->
+
+  <ion-fab slot="fixed" vertical="top" horizontal="end">
+    <ion-fab-button color="light">
+      <ion-icon name="person-circle-outline"></ion-icon>
+        </ion-fab-button>
+  </ion-fab>
+
+  <ion-img src="..\assets\myRaft_Top_Logo.png" alt="MyRaft Top Logo"></ion-img>
+
+  <!-- End of MyRaft Logo and Student Avatar FAB -->
+
+  <ion-card>
+    <ion-img
+      src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fejournalz.com%2Fwp-content%2Fuploads%2F2019%2F04%2FjobFair.jpg&f=1&nofb=1"
+      alt="Job Fair Logo"></ion-img>
+    <ion-card-header>
+      <div class="card-header-content">
+        <div>
+          <ion-card-title>Spring Career Fair</ion-card-title>
+          <ion-card-subtitle><a href="">By: Career Development Center</a></ion-card-subtitle>
+
+        </div>
+        <button class="appheader register-button">Register</button>
+      </div>
+    </ion-card-header>
+  </ion-card>
+
+
+
+
+  <!-- Event Info -->
+  <ion-content [fullscreen]="true" class="ion-padding event-info">
+    <h2>Details</h2>
+    <p>Wednesday, March 8<br>
+      12PM - 3PM<br>
+      OSU Ballroom</p>
+
+    <h2>Description:</h2>
+    <p>Explore internship and job opportunities with leading companies at our Spring Career Fair! Netowrk with
+      recruiters, submit resumes, and gain valuable insights into various industries..</p>
+
+    <h2>Attendees:</h2>
+    <div class="attendees">
+      <div class="attendee">
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.istockphoto.com%2Fvectors%2Fdefault-profile-picture-avatar-photo-placeholder-vector-illustration-vector-id1223671392%3Fk%3D6%26m%3D1223671392%26s%3D612x612%26w%3D0%26h%3DNGxdexflb9EyQchqjQP0m6wYucJBYLfu46KCLNMHZYM%3D&f=1&nofb=1&ipt=6f14baa35f91b4fa8dff99cb1e3615874d3356626035e0ec6984b1eda25ca669&ipo=images" alt="Student 1">
+        <p>Faraje</p>
+      </div>
+      <div class="attendee">
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.istockphoto.com%2Fvectors%2Fdefault-profile-picture-avatar-photo-placeholder-vector-illustration-vector-id1223671392%3Fk%3D6%26m%3D1223671392%26s%3D612x612%26w%3D0%26h%3DNGxdexflb9EyQchqjQP0m6wYucJBYLfu46KCLNMHZYM%3D&f=1&nofb=1&ipt=6f14baa35f91b4fa8dff99cb1e3615874d3356626035e0ec6984b1eda25ca669&ipo=images" alt="Student 2">
+        <p>Daysi</p>
+      </div>
+      <div class="attendee">
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.istockphoto.com%2Fvectors%2Fdefault-profile-picture-avatar-photo-placeholder-vector-illustration-vector-id1223671392%3Fk%3D6%26m%3D1223671392%26s%3D612x612%26w%3D0%26h%3DNGxdexflb9EyQchqjQP0m6wYucJBYLfu46KCLNMHZYM%3D&f=1&nofb=1&ipt=6f14baa35f91b4fa8dff99cb1e3615874d3356626035e0ec6984b1eda25ca669&ipo=images" alt="Student 3">
+        <p>Sasha</p>
+      </div>
+      <div class="attendee">
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.istockphoto.com%2Fvectors%2Fdefault-profile-picture-avatar-photo-placeholder-vector-illustration-vector-id1223671392%3Fk%3D6%26m%3D1223671392%26s%3D612x612%26w%3D0%26h%3DNGxdexflb9EyQchqjQP0m6wYucJBYLfu46KCLNMHZYM%3D&f=1&nofb=1&ipt=6f14baa35f91b4fa8dff99cb1e3615874d3356626035e0ec6984b1eda25ca669&ipo=images" alt="Student 4">
+        <p>Malie</p>
+      </div>
+    </div>
+
+
+
+  </ion-content>
+  <!-- End of Event Info -->
+
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <!-- Navigation Bar -->
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+
+        <ion-tab-button [routerLink]="['/home']" tab="home">
+          <ion-icon name="home-outline"></ion-icon>
+        </ion-tab-button>
+
+        <ion-tab-button [routerLink]="['/resources-page']" tab="journal">
+          <ion-icon name="journal-outline"></ion-icon>
+        </ion-tab-button>
+
+        <ion-tab-button [routerLink]="['/event-details']" tab="people">
+          <ion-icon name="people-outline"></ion-icon>
+        </ion-tab-button>
+
+        <ion-tab-button [routerLink]="['/chats-page']" tab="chat">
+          <ion-icon name="chatbox-outline"></ion-icon>
+        </ion-tab-button>
+
+        <ion-tab-button tab="menu">
+          <ion-icon name="menu-outline"></ion-icon>
+        </ion-tab-button>
+
+      </ion-tab-bar>
+    </ion-tabs>
+    <!-- End of Navigation Bar -->
+  </ion-toolbar>
+</ion-footer>

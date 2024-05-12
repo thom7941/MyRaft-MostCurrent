@@ -1,0 +1,235 @@
+<ion-content [fullscreen]="true">
+
+      <!-- Start of Student Avatar FAB -->
+
+      <ion-fab slot="fixed" vertical="top" horizontal="end">
+        <ion-fab-button color="light">
+          <ion-icon name="person-circle-outline"></ion-icon>
+            </ion-fab-button>
+      </ion-fab>
+    
+      <!-- End of Student Avatar FAB -->
+    
+      <ion-img src="..\assets\myRaft_Top_Logo.png" alt="MyRaft Top Logo"></ion-img>
+      
+  <div id = "trial2">
+    <h1> Groups </h1>
+  </div>
+
+
+<!-- Search Container -->
+<div id="searchContainer"> 
+
+  <ion-toolbar>
+    <ion-buttons start>
+      <ion-searchbar class="custom" placeholder="Search Groups"></ion-searchbar>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button color="off-white" fill="solid">
+        <ion-icon slot="start" name="add"></ion-icon>
+        All Groups
+      </ion-button>
+    </ion-buttons>
+
+</ion-toolbar>
+</div>
+
+<!-- Suggested Container -->
+<div id="suggestedContainer">
+
+  <ion-toolbar>
+    <ion-buttons start>Suggested Groups</ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button [color]="colorArr[1]" fill="solid" id="listButton" (click)="changeView('list')">
+        <ion-icon slot="icon-only" name="list-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button [color]="colorArr[0]" fill="solid" id="gridButton" (click)="changeView('grid')">
+        <ion-icon slot="icon-only" name="grid-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button id="filters-modal" expand="block">
+        <ion-icon slot="icon-only" name="funnel-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+</ion-toolbar>
+</div>
+
+<!-- List of Groups -->
+<div id="groupsContainer">
+
+  <div id="list">
+        <ion-list>
+      <ion-item *ngFor="let group of eventList"
+      routerLink="/group-overview">
+      
+
+        <ion-thumbnail slot="start">
+          <img src= "{{ group.img }}" />
+        </ion-thumbnail>
+        <ion-label>
+          <h3>{{group['title']}}</h3>
+          <p>{{group['description']}}</p>
+          <p>
+            <ion-icon slot="icon-only" name="person"></ion-icon>
+          </p>
+
+        </ion-label>
+      </ion-item>
+       
+    </ion-list>
+    
+  </div>
+  
+  <div id="grid" >
+    <ion-grid>
+      <ion-row *ngFor="let group of eventListHalf1; index as i">
+
+      <ion-col>
+        <ion-item>
+          <ion-button id="addGroup" (click) = "addGroup(eventListHalf1[i]['title'])" slot="end"> + </ion-button>
+          <ion-img class="center" src="{{eventListHalf1[i].img}}"/>
+          </ion-item>
+        <ion-label routerLink="/create-group/{{group.id}}">
+        <h3>{{eventListHalf1[i]['title']}}</h3><br>
+        <h6>{{eventListHalf1[i]['description']}}</h6> 
+        </ion-label>
+      </ion-col>
+
+      <ion-col *ngIf="eventListHalf2[i]; else placeholder">
+        <ion-item>
+          <ion-button id="addGroup2" (click) = "addGroup2(eventListHalf2[i]['title'])" slot="end"> + </ion-button>
+          <img class ="center" src="{{eventListHalf2[i].img}}"/>
+          </ion-item>
+        <ion-label routerLink="/create-group/{{group.id}}">
+        <h3>{{eventListHalf2[i]['title']}}</h3><br>
+        <h6>{{eventListHalf2[i]['description']}}</h6> 
+        </ion-label>
+      </ion-col>
+
+      <ng-template #placeholder>
+        <ion-col>
+          <ion-img ></ion-img>
+          <h3></h3><br>
+          <h6></h6> 
+        </ion-col>
+      </ng-template>
+      </ion-row>
+    </ion-grid>
+  </div>
+</div>
+
+<!-- FILTERS MODAL -->
+<ion-modal #modal trigger="filters-modal" [initialBreakpoint]="0.25" [breakpoints]="[0, 0.25, 0.5, 0.75]">
+  <ng-template>
+    <ion-content>
+      <ion-list color="danger" fill="solid">
+        <div id="sortBy" color="primary" fill="solid">
+          Sort By
+        </div>
+
+          <ion-buttons slot="start">
+            <ion-button>
+              Name: A -> Z
+            </ion-button>
+          </ion-buttons>
+
+          <ion-buttons slot="start">
+            <ion-button>
+              Name: Z -> A
+            </ion-button>
+          </ion-buttons> 
+
+          <ion-buttons slot="start">
+            <ion-button>
+              Member Size (dec)
+            </ion-button>
+          </ion-buttons>
+
+          <ion-buttons slot="start">
+            <ion-button>
+              Member Size (inc)
+            </ion-button>
+          </ion-buttons>
+
+          Categories
+
+          <ion-buttons slot="start">
+            <ion-button>
+              Academic Org
+            </ion-button>
+          </ion-buttons>
+
+          <ion-buttons slot="start">
+            <ion-button>
+              Department
+            </ion-button>
+          </ion-buttons> 
+
+          <ion-buttons slot="start">
+            <ion-button>
+              Faith Based
+            </ion-button>
+          </ion-buttons>
+
+          <ion-buttons slot="start">
+            <ion-button>
+              Greek Life
+            </ion-button>
+          </ion-buttons>
+
+          
+          <ion-toolbar>
+            <ion-buttons slot="start">
+              <ion-button>
+                Clear Filters
+              </ion-button>
+            </ion-buttons>
+  
+            <ion-buttons slot="start">
+              <ion-button routerLink="/groups">
+                Show Results
+              </ion-button>
+            </ion-buttons>
+
+          </ion-toolbar>
+
+      </ion-list>
+    </ion-content>
+  </ng-template>
+</ion-modal>
+
+
+   
+</ion-content>
+
+<!-- FOOTER -->
+<ion-footer>
+    <ion-tab-bar slot="bottom">
+  
+      <ion-tab-button routerLink="/home" tab="home">
+        <ion-icon name="home-outline"></ion-icon>
+      </ion-tab-button>
+  
+      <ion-tab-button routerLink="/resources" tab="journal">
+        <ion-icon name="journal-outline"></ion-icon>
+      </ion-tab-button>
+  
+      <ion-tab-button routerLink="/groups" tab="people">
+        <ion-icon name="people-outline"></ion-icon>
+      </ion-tab-button>
+  
+      <ion-tab-button routerLink="/chats" tab="chat">
+        <ion-icon name="chatbox-outline"></ion-icon>
+      </ion-tab-button>
+  
+    </ion-tab-bar>
+</ion-footer>
+ 

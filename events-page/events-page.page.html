@@ -1,0 +1,129 @@
+<ion-content [fullscreen]="true">
+  
+  <!-- Start of Student Avatar FAB -->
+  <ion-fab slot="fixed" vertical="top" horizontal="end">
+    <ion-fab-button color="light">
+      <ion-icon name="person-circle-outline"></ion-icon>  
+    </ion-fab-button>
+  </ion-fab>
+
+  <!-- End of Student Avatar FAB -->
+  <ion-img src="..\assets\myRaft_Top_Logo.png" alt="MyRaft Top Logo"></ion-img>
+  
+  <!-- Feed/Events Header -->
+  <div id="page-title">
+    <button routerLink="/home" class="appheader">Feed</button>
+    <button routerLink="/events" class="appheader"  id="currentButton">Events</button>
+  </div>
+
+  <!-- Search Container -->
+  <ion-toolbar id="searchContainer">
+    <ion-buttons start>
+      <ion-searchbar class="custom" placeholder="Search Events"></ion-searchbar>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button [color]="colorArr[1]" fill="solid" id="listButton" (click)="changeView('today')">
+        <ion-icon slot="icon-only" name="list-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button [color]="colorArr[0]" fill="solid" id="calendarButton" (click)="changeView('calendar')">
+        <ion-icon slot="icon-only" name="calendar-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+</ion-toolbar>
+
+ <!-- My Events Container -->
+ <ion-toolbar id="myEventsContainer">
+    <ion-buttons slot="start">
+      <ion-button routerLink="/my-events" >
+        <h5>My Events</h5>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="start">
+      <ion-button id="liveButton">
+        <h5> Live </h5>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button color="off-white" fill = "solid" id="filterButton" routerLink="/group-filters">
+        <ion-icon slot="icon-only" color="raft-blue" name="funnel-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+ </ion-toolbar>
+
+<!-- Today/Upcoming Container -->
+<div id="today" class="ion-text-left">
+  <ion-toolbar>
+      <h4> Today </h4>
+  </ion-toolbar>
+
+  <ion-list>
+    <ion-card *ngFor="let event of eventlist">
+      <img src= "{{ event.img }}" />
+      <ion-card-header>
+        <ion-card-title>
+          {{event['title']}}
+        </ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        {{event['description']}}
+      </ion-card-content>
+    </ion-card>
+     
+  </ion-list>
+
+  <ion-toolbar>
+    <h4> Upcoming </h4>
+  </ion-toolbar>
+  
+  <ion-card>
+    <img src= "hjhjhj.png" />
+    <ion-card-header>
+      <ion-card-title>
+        Farmers Market
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      Thursday, March 7 &#64; 2 PM
+    </ion-card-content>
+  </ion-card>
+
+</div>
+
+<!-- Calendar Container -->
+<div id="calendar">
+  <ion-datetime></ion-datetime>
+</div>
+
+</ion-content>
+
+<!-- FOOTER -->
+<ion-footer>
+    <ion-tab-bar slot="bottom">
+
+      <ion-tab-button routerLink="/home" tab="home">
+        <ion-icon name="home-outline"></ion-icon>
+      </ion-tab-button>
+
+      <ion-tab-button routerLink="/resources" tab="journal">
+        <ion-icon name="journal-outline"></ion-icon>
+      </ion-tab-button>
+
+      <ion-tab-button routerLink="/groups" tab="people">
+        <ion-icon name="people-outline"></ion-icon>
+      </ion-tab-button>
+
+      <ion-tab-button routerLink="/chats" tab="chat">
+        <ion-icon name="chatbox-outline"></ion-icon>
+      </ion-tab-button>
+
+    </ion-tab-bar>
+</ion-footer>
